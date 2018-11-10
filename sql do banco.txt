@@ -1,0 +1,46 @@
+create table pokemon(
+idpokemon int auto_increment,
+nome varchar(35) not null,
+tipo varchar(15) not null,
+categoria varchar (15) not null,
+peso float not null,
+altura float not null,
+habilidade varchar(35) not null,
+primary key(idpokemon)
+);
+
+create table treinador(
+idtreinador int auto_increment,
+nome varchar(35) not null,
+sexo varchar(35) not null,
+cidade varchar(35) not null,
+altura float not null,
+qtdinsignias int not null,
+primary key(idtreinador)
+);
+
+create table ginasio(
+idginasio int auto_increment,
+nome varchar(30) not null,
+localizacao varchar(50) not null,
+tipo varchar(15) not null,
+lider varchar(25) not null,
+insignia varchar(30) not null,
+primary key(idginasio)
+);
+
+insert into pokemon(idpokemon,nome,tipo,categoria,peso,altura,habilidade)
+values(null,'Bulbassauro','Planta',0,6.9,0.7,'Bomba de lodo'),
+      (null,'Jigglypuff','Fada',0,6.55,0.53,'Clarão deslumbrante'),
+      (null,'Pidgeot','Voador',2,28.65,1.4,'Ás dos ares'),
+      (null,'Pidgeotto','Voador',1,30,1.15,'Cortador de ar');
+
+insert into treinador(idtreinador,nome,sexo,cidade,altura,qtdinsignias)
+values(null,'Brock','masculino','Pewter',1.8,10),
+      (null,'Misty','feminino','Cerulean',1.63,13),
+      (null,'Erika','feminino','Celadon',1.5,9);
+
+insert into ginasio(idginasio,nome,localizacao,tipo,lider,insignia)
+values(null,'Pewter gym','pewter','pedra','Brock','Boulder badge'),
+      (null,'Cerulean gym','Cerulean','Água','Misty','Cascade badge'),
+      (null,'Celadon gym','Celadon','Planta','Erika','Rainbow badge');
